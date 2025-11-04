@@ -1,0 +1,23 @@
+{
+    "name": "Mi PWA con Cámara",
+    "short_name": "PWA Cámara",
+    "start_url": "/CamaraPwa/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "description": "Aplicación web progresiva que utiliza la cámara del dispositivo",
+    "icons": [
+        {
+            "src": "./images/icons/192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
+}
