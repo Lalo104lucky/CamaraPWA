@@ -1,7 +1,7 @@
 {
     "name": "Mi PWA con Cámara",
     "short_name": "PWA Cámara",
-    "start_url": "/CamaraPwa/",
+    "start_url": "/CamaraPWA/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
