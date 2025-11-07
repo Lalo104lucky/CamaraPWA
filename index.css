@@ -16,14 +16,15 @@ h1 {
 }
 
 video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
     border-radius: 8px;
     background: #000;
     display: block;
     margin-bottom: 8px;
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    object-fit: contain;
 }
 
 #controls {
@@ -71,7 +72,6 @@ canvas {
 
 
 .thumb {
-    display: block;
     max-width: 90vw;
     max-height: 320px;
     width: auto;
@@ -80,6 +80,7 @@ canvas {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     background: #000;
+    display: block;
     margin: 0 auto;
 }
 
