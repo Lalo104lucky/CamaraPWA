@@ -47,6 +47,35 @@
         transition: opacity 0.3s;">
     </div>
 
+    <div id="connection-status"
+        style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; text-align: center; font-weight: bold; font-size: 0.8rem; padding: 8px 0; display: none; transition: background 0.3s;">
+    </div>
+
+    <script>
+        function setConnectionOutline(isOnline) {
+            document.body.classList.remove('online', 'offline');
+            if (isOnline) {
+                document.body.classList.add('online');
+                const bar = document.getElementById('connection-status');
+                bar.style.background = '#28a745';
+                bar.style.color = '#fff';
+                bar.textContent = 'Online';
+                bar.style.display = 'block';
+                setTimeout(() => { bar.style.display = 'none'; }, 2000);
+            } else {
+                document.body.classList.add('offline');
+                const bar = document.getElementById('connection-status');
+                bar.style.background = '#dc3545';
+                bar.style.color = '#fff';
+                bar.textContent = 'Offline';
+                bar.style.display = 'block';
+            }
+        }
+        setConnectionOutline(navigator.onLine);
+        window.addEventListener('online', () => setConnectionOutline(true));
+        window.addEventListener('offline', () => setConnectionOutline(false));
+    </script>
+
     <script src="./app.js"></script>
 </body>
 </html>
