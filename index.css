@@ -70,15 +70,15 @@ canvas {
 }
 
 
-/* Como puedo arreglar el thumb para pantallas de telefono porque se ve muy ancho */
-
 .thumb {
     width: 100%;
     max-width: 420px;
+    max-height: 320px;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background: #000; 
 }
 
 .gallery-controls {
