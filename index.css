@@ -71,14 +71,16 @@ canvas {
 
 
 .thumb {
-    width: 100%;
-    max-width: 420px;
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: 320px;
     max-height: 320px;
-    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    background: #000; 
+    background: #000;
+    margin: 0 auto;
 }
 
 .gallery-controls {
