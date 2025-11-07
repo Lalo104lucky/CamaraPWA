@@ -5,18 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWA-Camara</title>
     <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#317EFB"/>
+    <meta name="theme-color" content="#317EFB" />
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@9.0.0/dist/pouchdb.min.js"></script>
+    <style>
+        
+    </style>
 </head>
 <body>
     <h1>PWA con Cámara</h1>
 
-    <div id="cameraContainer" style="display: none;">
-        <video id="video" autoplay width="320" height="240"></video>
-        <button id="takePhoto">Tomar Foto</button>
-        <canvas id="canvas" width="320" height="240"></canvas>
+    <div id="controls">
+        <button id="openCamera">Abrir la Cámara</button>
+        <button id="toggleCamera" class="secondary">Cambiar Cámara</button>
+        <button id="takePhoto" class="secondary">Tomar Foto</button>
+        <button id="clearGallery" class="secondary">Limpiar Galería</button>
     </div>
 
-    <button id="openCamera">Abrir la Cámara</button>
+    <div id="cameraContainer">
+        <video id="video" autoplay playsinline width="320" height="240"></video>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <div id="galleryWrap">
+        <div id="gallery"></div>
+    </div>
+
+    <div id="toast-msg" style="position: fixed;
+        left: 50%;
+        bottom: 24px;
+        transform: translateX(-50%);
+        background: #222;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 14px;
+        font-size: 0.95rem;
+        box-shadow: 0 2px 10px #0004;
+        z-index: 99999;
+        display: none;
+        transition: opacity 0.3s;">
+    </div>
 
     <script src="./app.js"></script>
 </body>

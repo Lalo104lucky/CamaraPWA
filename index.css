@@ -1,0 +1,93 @@
+body {
+    font-family: system-ui, Arial;
+    margin: 16px;
+    background: linear-gradient(#e6f0ff, #fff);
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#cameraContainer {
+    display: none;
+    margin-bottom: 12px;
+}
+
+video {
+    border-radius: 8px;
+    background: #000;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 100%;
+}
+
+#controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #317efb;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.secondary {
+    background: #6c757d;
+}
+
+canvas {
+    display: none;
+}
+
+/* oculto, solo se usa para generar imagen */
+/* Galería horizontal */
+#galleryWrap {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 50vh;
+    padding: 8px 6px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.thumb {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+@media(max-width:420px) {
+    .thumb {
+        max-width: 360px;
+    }
+
+    button {
+        padding: 8px 10px;
+    }
+}

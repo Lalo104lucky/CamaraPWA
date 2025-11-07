@@ -4,7 +4,11 @@ const urlsToCache = [ // Lista de archivos a guardar en caché
     './',
     './index.html',
     './app.js',
-    './manifest.json'
+    './manifest.json',
+    './index.css',
+    './images/icons/192.png',
+    './images/icons/512.png',
+    'https://cdn.jsdelivr.net/npm/pouchdb@9.0.0/dist/pouchdb.min.js'
 ];
 
 // Instalar Service Worker
