@@ -20,7 +20,7 @@ video {
     max-width: 100%;
     height: auto;
     max-height: 60vh;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 8px;
     background: #000;
     display: block;
