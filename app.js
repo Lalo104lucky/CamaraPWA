@@ -86,7 +86,12 @@ async function takePhoto() {
 
     // 1. Dibujar el Frame de Video en el Canvas
     // El método drawImage() es clave: toma el <video> como fuente.
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const vw = video.videoWidth || 640;
+    const vh = video.videoHeight || 480;
+    canvas.width = vw;
+    canvas.height = vh;
+
+    ctx.drawImage(video, 0, 0, vw, vh);
     
     // 2. Conversión a Data URL
     const imageDataURL = canvas.toDataURL('image/png');
