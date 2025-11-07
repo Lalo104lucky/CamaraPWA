@@ -69,6 +69,9 @@ canvas {
     align-items: center;
 }
 
+
+/* Como puedo arreglar el thumb para pantallas de telefono porque se ve muy ancho */
+
 .thumb {
     width: 100%;
     max-width: 420px;
@@ -86,6 +89,9 @@ canvas {
 }
 
 @media(max-width:420px) {
+    #gallery {
+        gap: 6px;
+    }
     .thumb {
         max-width: 360px;
     }
